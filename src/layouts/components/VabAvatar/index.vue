@@ -11,12 +11,6 @@
 
     <el-dropdown-menu slot="dropdown">
       <el-dropdown-item command="github">github地址</el-dropdown-item>
-      <el-dropdown-item command="gitee" divided>码云地址</el-dropdown-item>
-      <el-dropdown-item command="pro" divided>pro付费版地址</el-dropdown-item>
-      <el-dropdown-item command="plus" divided>plus付费版地址</el-dropdown-item>
-      <el-dropdown-item command="shop" divided>
-        shop-vite付费版地址
-      </el-dropdown-item>
       <el-dropdown-item command="logout" divided>退出登录</el-dropdown-item>
     </el-dropdown-menu>
   </el-dropdown>
@@ -40,47 +34,21 @@
           case 'logout':
             this.logout()
             break
-          case 'personalCenter':
-            this.personalCenter()
-            break
           case 'github':
-            window.open('https://github.com/chuzhixin/vue-admin-better')
+            window.open('https://github.com/ChenFushuo/admin-template-better')
             break
-          case 'gitee':
-            window.open('https://gitee.com/chu1204505056/vue-admin-better')
-            break
-          case 'pro':
-            window.open(
-              'https://vue-admin-beautiful.com/admin-pro/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci='
-            )
-            break
-          case 'plus':
-            window.open(
-              'https://vue-admin-beautiful.com/admin-plus/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci='
-            )
-          case 'shop':
-            window.open(
-              'https://vue-admin-beautiful.com/shop-vite/?hmsr=homeAd&hmpl=&hmcu=&hmkw=&hmci='
-            )
         }
       },
-      personalCenter() {
-        this.$router.push('/personalCenter/personalCenter')
-      },
       logout() {
-        this.$baseConfirm(
-          '您确定要退出' + this.$baseTitle + '吗?',
-          null,
-          async () => {
-            await this.$store.dispatch('user/logout')
-            if (recordRoute) {
-              const fullPath = this.$route.fullPath
-              this.$router.push(`/login?redirect=${fullPath}`)
-            } else {
-              this.$router.push('/login')
-            }
+        this.$baseConfirm('您确定要退出' + this.$baseTitle + '吗?', null, async () => {
+          await this.$store.dispatch('user/logout')
+          if (recordRoute) {
+            const fullPath = this.$route.fullPath
+            this.$router.push(`/login?redirect=${fullPath}`)
+          } else {
+            this.$router.push('/login')
           }
-        )
+        })
       },
     },
   }
