@@ -1,13 +1,20 @@
 <template>
   <div class="pageContainer">
-    <div>首页</div>
+    <div class="indexContainer">
+      <pagination :limit="pagination.limit" :page="pagination.page" :page-sizes="pageSizes" :total="total" @pagination="upadteUserList" />
+    </div>
   </div>
 </template>
 
 <script>
+  import pageMixin from '@/utils/mixin/routerPage'
+  import Pagination from '@/components/Pagination'
   export default {
     name: 'Index',
-    components: {},
+    components: {
+      Pagination,
+    },
+    mixins: [pageMixin],
     data() {
       return {}
     },
@@ -16,4 +23,8 @@
     methods: {},
   }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .indexContainer {
+    height: 100vh;
+  }
+</style>

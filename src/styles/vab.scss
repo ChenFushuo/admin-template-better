@@ -34,8 +34,8 @@ $base: '.vab';
 
 @mixin base-scrollbar {
   &::-webkit-scrollbar {
-    width: 13px;
-    height: 13px;
+    width: 10px;
+    height: 10px;
   }
 
   &::-webkit-scrollbar-thumb {

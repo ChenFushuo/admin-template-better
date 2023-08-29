@@ -174,7 +174,7 @@ module.exports = {
   productionSourceMap: false,
   css: {
     requireModuleExtension: true,
-    sourceMap: false,
+    sourceMap: true,
     loaderOptions: {
       scss: {
         additionalData(content, loaderContext) {
