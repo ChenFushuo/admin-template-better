@@ -25,6 +25,7 @@ $base-font-size-big: 16px;
 $base-font-size-bigger: 18px;
 $base-font-size-max: 22px;
 $base-font-color: #606266;
+//颜色
 $base-color-blue: $base-color-default;
 $base-color-green: #41b882;
 $base-color-white: #fff;
@@ -33,8 +34,12 @@ $base-color-yellow: #ffa91b;
 $base-color-orange: #ff6700;
 $base-color-red: #f34d37;
 $base-color-gray: rgba(0, 0, 0, 0.65);
+$base-color-transparent: transparent;
+//主题宽度
 $base-main-width: 1279px;
+//默认圆角度数
 $base-border-radius: 4px;
+//默认边框颜色
 $base-border-color: #dcdfe6;
 //输入框高度
 $base-input-height: 32px;
@@ -55,10 +60,7 @@ $base-tag-item-height: 34px;
 //菜单li标签的高度
 $base-menu-item-height: 50px;
 //app-main的高度
-$base-app-main-height: calc(
-  100vh - #{$base-nav-bar-height} - #{$base-tabs-bar-height} - #{$base-padding} -
-  #{$base-padding} - 55px - 55px
-);
+$base-app-main-height: calc(100vh - #{$base-nav-bar-height} - #{$base-tabs-bar-height} - #{$base-padding} - #{$base-padding} - 55px - 55px);
 //纵向布局时左侧导航未折叠时的宽度
 $base-left-menu-width: 256px;
 //纵向布局时左侧导航未折叠时右侧内容的宽度
@@ -68,8 +70,7 @@ $base-left-menu-width-min: 65px;
 //纵向布局时左侧导航已折叠时右侧内容的宽度
 $base-right-content-width-min: calc(100% - #{$base-left-menu-width-min});
 //默认动画
-$base-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), border 0s,
-background 0s, color 0s, font-size 0s;
+$base-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), border 0s, background 0s, color 0s, font-size 0s;
 //默认动画长
 $base-transition-time: 0.3s;
 

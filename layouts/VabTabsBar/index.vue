@@ -15,8 +15,7 @@
         :name="item.path"
       ></el-tab-pane>
     </el-tabs>
-
-    <el-dropdown @command="handleCommand">
+    <!-- <el-dropdown @command="handleCommand">
       <span style="cursor: pointer">
         更多操作
         <i class="el-icon-arrow-down el-icon--right"></i>
@@ -39,7 +38,7 @@
           关闭全部
         </el-dropdown-item>
       </el-dropdown-menu>
-    </el-dropdown>
+    </el-dropdown> -->
   </div>
 </template>
 

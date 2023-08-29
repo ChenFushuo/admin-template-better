@@ -3,6 +3,7 @@ import * as lodash from 'lodash'
 import { Loading, Message, MessageBox, Notification } from 'element-ui'
 import store from '@/store'
 import { getAccessToken } from '@/utils/accessToken'
+import gtMessage from './message'
 
 const accessToken = store.getters['user/accessToken']
 const layout = store.getters['settings/layout']
@@ -80,6 +81,9 @@ const install = (Vue) => {
       duration: messageDuration,
     })
   }
+
+  /* 全局Message----->可防止重复提示 */
+  Vue.prototype.$message = gtMessage
 
   /* 全局Alert */
   Vue.prototype.$baseAlert = (content, title, callback) => {

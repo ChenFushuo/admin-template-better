@@ -36,6 +36,7 @@
     "dayjs": "^1.11.9",
     "echarts": "5.4.3",
     "element-ui": "^2.15.14",
+    "js-md5": "^0.7.3",
     "jsencrypt": "^3.3.2",
     "layouts": "file:layouts",
     "lodash": "^4.17.21",

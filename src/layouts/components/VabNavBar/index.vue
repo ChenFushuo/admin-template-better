@@ -14,21 +14,9 @@
       </el-col>
       <el-col :lg="12" :md="12" :sm="12" :xl="12" :xs="20">
         <div class="right-panel">
-          <vab-error-log />
           <vab-full-screen-bar @refresh="refreshRoute" />
           <vab-theme-bar class="hidden-xs-only" />
-          <vab-icon
-            :icon="['fas', 'redo']"
-            :pulse="pulse"
-            title="重载所有路由"
-            @click="refreshRoute"
-          />
           <vab-avatar />
-          <!--  <vab-icon
-            title="退出系统"
-            :icon="['fas', 'sign-out-alt']"
-            @click="logout"
-          />-->
         </div>
       </el-col>
     </el-row>

@@ -39,14 +39,14 @@ $base: '.vab';
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: $base-color-default;
     background-clip: padding-box;
     border: 3px solid transparent;
     border-radius: 7px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(57, 128, 226);
   }
 
   &::-webkit-scrollbar-track {
@@ -171,6 +171,23 @@ html {
     }
 
     .el-table {
+      // element表格表头单元格背景色
+      tr {
+        background-color: $base-color-transparent;
+      }
+      .el-table__header-wrapper {
+        .el-table__header {
+          .has-gutter {
+            tr {
+              background-color: #f7f7f7;
+            }
+          }
+        }
+      }
+      th.el-table__cell {
+        background-color: $base-color-transparent;
+      }
+
       .el-table__body-wrapper {
         @include base-scrollbar;
       }
