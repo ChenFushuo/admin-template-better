@@ -8,6 +8,9 @@ import '@/layouts/export'
 import md5 from 'js-md5'
 Vue.prototype.$md5 = md5
 
+// 引入自定义插件对象
+import './components/index.js'
+
 import * as filters from './filters'
 Object.keys(filters).forEach((key) => {
   Vue.filter(key, filters[key])

@@ -23,13 +23,9 @@
 
 <script>
   import pageMixin from '@/utils/mixin/routerPage'
-  import Pagination from '@/components/Pagination'
 
   export default {
     name: 'Index',
-    components: {
-      Pagination,
-    },
     mixins: [pageMixin],
     data() {
       return {

@@ -32,7 +32,7 @@
 
 <script>
   export default {
-    name: 'SelectTreeTemplate',
+    name: 'SelectTree',
     props: {
       /* 树形结构数据 */
       treeOptions: {
