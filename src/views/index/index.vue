@@ -12,11 +12,19 @@
         <el-table-column align="center" label="操作">
           <template #default="scope">
             <el-button type="text" @click="edit(scope.row)">编辑</el-button>
-            <el-button class="delBtn" type="text" @click="delSchool(scope.row)">删除</el-button>
+            <el-button class="delBtn" type="text" @click="delSchool(scope.row)">
+              删除
+            </el-button>
           </template>
         </el-table-column>
       </el-table>
-      <pagination :limit="pagination.limit" :page="pagination.page" :page-sizes="pageSizes" :total="total" @pagination="upadteUserList" />
+      <pagination
+        :limit="pagination.limit"
+        :page="pagination.page"
+        :page-sizes="pageSizes"
+        :total="total"
+        @pagination="upadteUserList"
+      />
     </div>
   </div>
 </template>
