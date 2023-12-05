@@ -4,6 +4,7 @@
       <!-- 这里是logo变更的位置 -->
       <vab-remix-icon v-if="logo" :icon-class="logo" class="logo" />
       <span
+        v-else
         :class="{ 'hidden-xs-only': layout === 'horizontal' }"
         :title="title"
         class="title"

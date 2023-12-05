@@ -12,7 +12,7 @@
         <vab-top-bar />
         <div v-if="tabsBar === 'true' || tabsBar === true" :class="{ 'tag-view-show': tabsBar }">
           <div class="vab-main">
-            <vab-tabs-bar />
+            <!-- <vab-tabs-bar /> -->
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
       <div :class="collapse ? 'is-collapse-main' : ''" class="vab-main">
         <div :class="header === 'fixed' ? 'fixed-header' : ''">
           <vab-nav-bar />
-          <vab-tabs-bar v-if="tabsBar === 'true' || tabsBar === true" />
+          <!-- <vab-tabs-bar v-if="tabsBar === 'true' || tabsBar === true" /> -->
         </div>
         <vab-app-main />
       </div>
@@ -149,7 +149,8 @@
       position: relative;
 
       &.fixed {
-        padding-top: calc(#{$base-top-bar-height} + #{$base-tabs-bar-height});
+        // padding-top: calc(#{$base-top-bar-height} + #{$base-tabs-bar-height});
+        padding-top: calc(#{$base-tabs-bar-height});
       }
 
       &.fixed.no-tabs-bar {
@@ -205,7 +206,8 @@
       }
 
       &.fixed {
-        padding-top: calc(#{$base-nav-bar-height} + #{$base-tabs-bar-height});
+        // padding-top: calc(#{$base-nav-bar-height} + #{$base-tabs-bar-height});
+        padding-top: calc(#{$base-tabs-bar-height});
       }
 
       &.fixed.no-tabs-bar {

@@ -10,7 +10,7 @@
     "build": "vue-cli-service build",
     "build:node18": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
     "lint": "vue-cli-service lint --fix",
-    "clear": "rimraf node_modules&&npm install  --registry=--registry=https://registry.npmmirror.com",
+    "clear": "rm -rf node_modules && pnpm install",
     "image-webpack-loader": "cnpm i image-webpack-loader -D",
     "update": "ncu -u --reject webpack,eslint-plugin-prettier,@vue/eslint-config-prettier,prettier,layouts,sass-loader,sass,screenfull,eslint,chalk,vue,vue-template-compiler,vue-router,vuex,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,eslint-plugin-vue --registry=https://registry.npmmirror.com&&cnpm i",
     "push": "start ./push.sh"
@@ -29,12 +29,12 @@
     ]
   },
   "dependencies": {
-    "axios": "^1.5.0",
+    "axios": "0.21.1",
     "caniuse-lite": "^1.0.30001524",
     "clipboard": "^2.0.11",
     "core-js": "^3.32.1",
     "dayjs": "^1.11.9",
-    "echarts": "5.4.3",
+    "echarts": "^5.4.0",
     "element-ui": "^2.15.14",
     "js-md5": "^0.7.3",
     "jsencrypt": "^3.3.2",
