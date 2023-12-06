@@ -13,8 +13,13 @@
           :rules="rules"
         >
           <div class="title">hello !</div>
-          <div class="title-tips">欢迎来到{{ title }}！</div>
-          <el-form-item prop="username" style="margin-top: 40px">
+          <div class="title-tips">
+            欢迎来到{{ title }}！
+          </div>
+          <el-form-item
+            prop="username"
+            style="margin-top: 40px"
+          >
             <span class="svg-container svg-container-admin">
               <vab-icon :icon="['fas', 'user']" />
             </span>
@@ -46,7 +51,11 @@
             >
               <vab-icon :icon="['fas', 'eye-slash']" />
             </span>
-            <span v-else class="show-password" @click="handlePassword">
+            <span
+              v-else
+              class="show-password"
+              @click="handlePassword"
+            >
               <vab-icon :icon="['fas', 'eye']" />
             </span>
           </el-form-item>
@@ -125,7 +134,8 @@
     watch: {
       $route: {
         handler(route) {
-          this.redirect = (route.query && route.query.redirect) || '/'
+          this.redirect =
+            (route.query && route.query.redirect) || '/'
         },
         immediate: true,
       },
@@ -157,10 +167,13 @@
               .dispatch('user/login', this.form)
               .then(() => {
                 const routerPath =
-                  this.redirect === '/404' || this.redirect === '/401'
+                  this.redirect === '/404' ||
+                  this.redirect === '/401'
                     ? '/'
                     : this.redirect
-                this.$router.push(routerPath).catch(() => {})
+                this.$router
+                  .push(routerPath)
+                  .catch(() => {})
                 this.loading = false
               })
               .catch(() => {
@@ -178,7 +191,8 @@
 <style lang="scss" scoped>
   .login-container {
     height: 100vh;
-    background: url('~@/assets/login_images/background.jpg') center center fixed no-repeat;
+    background: url('~@/assets/login_images/background.jpg')
+      center center fixed no-repeat;
     background-size: cover;
 
     .title {

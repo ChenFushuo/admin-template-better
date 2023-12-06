@@ -8,12 +8,16 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ['plugin:vue/recommended', 'eslint:recommended', '@vue/prettier'],
+  extends: [
+    'plugin:vue/recommended',
+    'eslint:recommended',
+    '@vue/prettier',
+  ],
   rules: {
     'no-undef': 'off',
     'no-console': 'off',
     'no-debugger': 'off',
-    'prettier/prettier': 'warn',
+    'prettier/prettier': 'off',
     'prefer-template': 'error',
     '@typescript-eslint/no-this-alias': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
@@ -114,7 +118,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/__tests__/*.{j,t}s?(x)', '**/tests/unit/**/*.spec.{j,t}s?(x)'],
+      files: [
+        '**/__tests__/*.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)',
+      ],
       env: {
         jest: true,
       },

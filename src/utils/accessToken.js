@@ -28,11 +28,20 @@ export function getAccessToken() {
 export function setAccessToken(accessToken) {
   if (storage) {
     if ('localStorage' === storage) {
-      return localStorage.setItem(tokenTableName, accessToken)
+      return localStorage.setItem(
+        tokenTableName,
+        accessToken
+      )
     } else if ('sessionStorage' === storage) {
-      return sessionStorage.setItem(tokenTableName, accessToken)
+      return sessionStorage.setItem(
+        tokenTableName,
+        accessToken
+      )
     } else {
-      return localStorage.setItem(tokenTableName, accessToken)
+      return localStorage.setItem(
+        tokenTableName,
+        accessToken
+      )
     }
   } else {
     return localStorage.setItem(tokenTableName, accessToken)
